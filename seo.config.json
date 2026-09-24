@@ -1,0 +1,47 @@
+{
+  "siteUrl": "",
+  "siteName": "단풍페이",
+  "alternateName": "DANPUNG PAY",
+  "pages": [
+    {
+      "file": "index.html",
+      "indexable": true
+    },
+    {
+      "file": "service.html",
+      "indexable": true
+    },
+    {
+      "file": "guide.html",
+      "indexable": true
+    },
+    {
+      "file": "about.html",
+      "indexable": true
+    },
+    {
+      "file": "faq.html",
+      "indexable": true
+    },
+    {
+      "file": "notice.html",
+      "indexable": true
+    },
+    {
+      "file": "sitemap.html",
+      "indexable": true
+    },
+    {
+      "file": "terms.html",
+      "indexable": false
+    },
+    {
+      "file": "privacy.html",
+      "indexable": false
+    },
+    {
+      "file": "404.html",
+      "indexable": false
+    }
+  ]
+}

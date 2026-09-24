@@ -1,0 +1,62 @@
+/* Shared motion: the page stays readable when JavaScript or motion is disabled. */
+html { scrollbar-gutter: stable; }
+.motion-ready [data-reveal]:not(.is-revealed) { opacity: 0; }
+.motion-line { display: inline-block; }
+.button { position: relative; isolation: isolate; overflow: hidden; }
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -60% auto -60% -50%;
+  width: 45%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, #fff3, transparent);
+  transform: skewX(-18deg) translateX(-180%);
+  transition: transform 600ms cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.site-header .button::before { content: none; }
+.button > .icon, .button > .arrow { transition: translate 220ms ease, scale 220ms ease; }
+.desktop-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms ease;
+}
+.desktop-nav a { transition: color 180ms ease; }
+.overview-icon .icon { transition: rotate 280ms ease, scale 280ms ease; }
+.overview-more .icon, .useful-links-grid a > .icon:last-child { transition: translate 220ms ease; }
+.journey-tab-icon, .stage-dock > a, .contact-phone, .filter-buttons button, .menu-toggle { transition: color 220ms, background 220ms, box-shadow 220ms; }
+.journey-next .icon { transition: translate 220ms ease; }
+.faq-item summary { transition: color 180ms; }
+.faq-item[open] summary { color: var(--accent); }
+.faq-plus::before, .faq-plus::after { transition: transform 220ms ease, opacity 220ms ease; }
+.faq-item[open] .faq-plus::after { opacity: 0; }
+.contact-dialog[open]::backdrop { animation: backdrop-in 220ms ease both; }
+@keyframes backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@media (hover: hover) and (pointer: fine) {
+  .button:hover::before { transform: skewX(-18deg) translateX(440%); }
+  .button:hover > .icon { scale: 1.08; }
+  .button:hover > .icon:last-child, .button:hover > .arrow { translate: 3px 0; }
+  .desktop-nav a:hover::before { transform: scaleX(1); }
+  .overview-card:hover .overview-icon .icon { rotate: -6deg; scale: 1.07; }
+  .overview-card:hover .overview-more .icon, .useful-links-grid a:hover > .icon:last-child { translate: 3px 0; }
+  .journey-next:hover .icon { translate: 3px 0; }
+  .journey-tab:not([aria-selected="true"]):hover .journey-tab-icon { color: #985532; }
+  .menu-toggle:hover { background: #dfd1bf; }
+  .contact-phone:hover { color: var(--accent); }
+  .faq-item summary:hover { color: var(--accent); }
+}
+.desktop-nav a:focus-visible::before { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready [data-reveal] { opacity: 1 !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  [data-reveal] { opacity: 1 !important; }
+}

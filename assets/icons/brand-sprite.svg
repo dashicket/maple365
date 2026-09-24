@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Original interface symbols for Danpung Pay. -->
+  <symbol id="icon-chat" viewBox="0 0 32 32">
+    <path
+      fill="currentColor"
+      d="M16 3C8.3 3 2 8.2 2 14.7c0 3.7 2.1 7 5.5 9.1L5.8 30l7.5-3.8c.9.1 1.8.2 2.7.2 7.7 0 14-5.2 14-11.7S23.7 3 16 3Z"
+    />
+    <g fill="var(--icon-detail, #fffaf5)">
+      <circle cx="9.7" cy="14.7" r="1.6" />
+      <circle cx="16" cy="14.7" r="1.6" />
+      <circle cx="22.3" cy="14.7" r="1.6" />
+    </g>
+  </symbol>
+  <symbol id="icon-guide" viewBox="0 0 32 32">
+    <rect x="5" y="2" width="23" height="28" rx="3" fill="currentColor" />
+    <path
+      d="M10 9h12M10 15h12M10 21h8"
+      fill="none"
+      stroke="var(--icon-detail, #fffaf5)"
+      stroke-width="1.5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M3 6v21a3 3 0 0 0 3 3"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+    />
+  </symbol>
+  <symbol id="icon-database" viewBox="0 0 32 32">
+    <g fill="none" stroke="currentColor" stroke-width="1.4">
+      <ellipse cx="16" cy="6" rx="11.5" ry="4" />
+      <path
+        d="M4.5 6v20c0 2.2 5.1 4 11.5 4s11.5-1.8 11.5-4V6M4.5 12.5c0 2.2 5.1 4 11.5 4s11.5-1.8 11.5-4M4.5 19c0 2.2 5.1 4 11.5 4s11.5-1.8 11.5-4"
+      />
+    </g>
+  </symbol>
+  <symbol id="icon-user" viewBox="0 0 32 32">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="16" cy="9" r="5.5" />
+      <path d="M5 28v-3c0-5 4.7-9 11-9s11 4 11 9v3Z" />
+    </g>
+  </symbol>
+  <symbol id="icon-users" viewBox="0 0 32 32">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="9" r="5" />
+      <path
+        d="M2 28v-3c0-4.7 4.2-8.5 10-8.5S22 20.3 22 25v3ZM22 4.2a5 5 0 0 1 0 9.6M25 18c3 1.4 5 4 5 7v3h-4"
+      />
+    </g>
+  </symbol>
+  <symbol id="icon-leaf" viewBox="0 0 64 64">
+    <!-- Original five-lobed maple, shared with favicon.svg and maple.svg. -->
+    <path fill="currentColor" d="M32 3C29 10 27 15 27 21L23 18L24 28C19 25 16 18 10 15L12 25L7 24L15 35L5 33L8 40L3 43C11 44 17 50 29 48L29 59Q29 62 32 62Q35 62 35 59L35 48C47 50 53 44 61 43L56 40L59 33L49 35L57 24L52 25L54 15C48 18 45 25 40 28L41 18L37 21C37 15 35 10 32 3Z"/>
+  </symbol>
+  <symbol id="icon-home" viewBox="0 0 24 24">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7" />
+    </g>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="3" y="3" width="7" height="7" rx="2" />
+      <rect x="14" y="3" width="7" height="7" rx="2" />
+      <rect x="3" y="14" width="7" height="7" rx="2" />
+      <rect x="14" y="14" width="7" height="7" rx="2" />
+    </g>
+  </symbol>
+  <symbol id="icon-compass" viewBox="0 0 24 24">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="9.5" />
+      <path d="m16.5 7.5-3 6-6 3 3-6Z" />
+    </g>
+  </symbol>
+  <symbol id="icon-headset" viewBox="0 0 24 24">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M4 14V10a8 8 0 0 1 16 0v4M20 17v2c0 2-3 3-6 3" />
+      <rect x="2" y="11" width="5" height="8" rx="2" />
+      <rect x="17" y="11" width="5" height="8" rx="2" />
+    </g>
+  </symbol>
+  <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+    <path
+      d="M6 18 18 6M6 6h12v12"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+    <path
+      d="M4 12h15m-6-6 6 6-6 6"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+</svg>

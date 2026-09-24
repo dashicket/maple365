@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{SITE_URL}}/</loc></url>
+  <url><loc>{{SITE_URL}}/service.html</loc></url>
+  <url><loc>{{SITE_URL}}/guide.html</loc></url>
+  <url><loc>{{SITE_URL}}/about.html</loc></url>
+  <url><loc>{{SITE_URL}}/faq.html</loc></url>
+  <url><loc>{{SITE_URL}}/notice.html</loc></url>
+  <url><loc>{{SITE_URL}}/sitemap.html</loc></url>
+</urlset>

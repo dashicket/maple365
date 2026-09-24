@@ -1,0 +1,764 @@
+/* Bench3 composition with the original card surfaces and content. */
+.home-page { background: var(--cream); }
+.home-opening {
+  --opening-fade-height: clamp(1050px, 100vw, 1450px);
+  position: relative;
+  isolation: isolate;
+  display: flow-root;
+  overflow: clip;
+  background:
+    linear-gradient(180deg, #f2ece3, #f1e7db 32%, #f2ece3)
+      top / 100% var(--opening-fade-height) no-repeat,
+    #fcfbf8;
+}
+.experience-stage {
+  position: relative;
+  padding: 52px 0 64px;
+  margin-bottom: 28px;
+  --surface: linear-gradient(135deg, #faf5ef, #eee6dc);
+  --shadow:
+    9px 14px 23px #66534022, 2px 4px 6px #6653400a, inset 1px 1px 1px #ffffffd6;
+}
+/* Carry the diagonal fade beyond the hero so the right stays warm into services. */
+.home-opening::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: var(--opening-fade-height);
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 68% 46% at 0% 66%,
+      #fff 12%,
+      #ffffffd9 36%,
+      #ffffff70 58%,
+      #ffffff00 84%
+    ),
+    radial-gradient(
+      ellipse 180% 100% at 140% -30%,
+      #fcfbf800 95%,
+      #fcfbf84d 101%,
+      #fcfbf8cc 112%,
+      #fcfbf8 120%
+    );
+}
+.welcome-copy {
+  position: relative;
+  z-index: 3;
+}
+.welcome-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 24px;
+  padding: 8px 13px;
+  border: 1px solid #ab84615e;
+  border-radius: 30px;
+  color: #926348;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  background: #faf4eb52;
+}
+.welcome-copy h1 {
+  font: 600 clamp(42px, 4.3vw, 62px) / 1.27 var(--display);
+  letter-spacing: -0.065em;
+}
+.welcome-copy h1 em {
+  display: inline-block;
+  color: #a74d2d;
+}
+.welcome-copy > p:last-child {
+  margin-top: 23px;
+  color: #796a5c;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.terrain {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  flex: 1;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  pointer-events: none;
+}
+.terrain img {
+  width: 100%;
+  height: auto;
+}
+.hero-consult {
+  align-self: flex-start;
+  width: var(--hero-consult-width, 198px);
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 32px;
+  padding-inline: 35px;
+  border-radius: 14px;
+  font-size: 15px;
+}
+.consult-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 23px 25px 24px;
+  border: 1px solid #ffffff2e;
+  border-radius: 29px;
+  color: #f6efe4;
+  background:
+    radial-gradient(ellipse at left top, #4d514c, transparent 80%),
+    linear-gradient(135deg, #3c413c, #303531);
+  box-shadow:
+    10px 16px 23px #3d372d30,
+    inset 1px 1px 1px #ffffff33;
+}
+.consult-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b8bdad;
+}
+.consult-top > span {
+  font-size: var(--text-decor);
+  letter-spacing: 0.12em;
+}
+.consult-top .icon {
+  color: #e1a475;
+  width: 29px;
+  height: 29px;
+}
+.consult-card h2 {
+  font: 400 28px/1.38 var(--display);
+  letter-spacing: -0.04em;
+  margin-top: 11px;
+}
+.consult-card > p {
+  font-size: var(--text-min);
+  color: #c7c4b8;
+  margin-top: 10px;
+}
+.consult-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+.consult-actions .button {
+  flex: 1;
+  font-size: var(--text-min);
+  padding: 10px;
+  min-height: 41px;
+  border-radius: 12px;
+}
+.consult-actions .icon {
+  width: 16px;
+  height: 16px;
+}
+.service-widget {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px 18px 17px;
+}
+.widget-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.widget-heading h2 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+.widget-heading > a {
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  min-height: 34px;
+  color: #a25a39;
+}
+.widget-heading > a .icon {
+  width: 18px;
+  height: 18px;
+}
+.service-widget > .widget-heading {
+  padding-left: 5px;
+}
+.service-options {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.service-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 5px;
+  border-radius: 17px;
+  transition: background 0.2s;
+}
+.service-option:hover {
+  background: #fffaf273;
+}
+.service-object {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 59px;
+  height: 65px;
+  border-radius: 17px;
+  flex: 0 0 auto;
+  box-shadow:
+    inset 1px 1px 1px #fff9,
+    inset -1px -2px 3px #87624835,
+    4px 5px 8px #70503920;
+  transform: rotate(-4deg);
+  transition: transform 0.2s;
+}
+.service-option:hover .service-object {
+  transform: rotate(0);
+}
+.service-object > .icon {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(1px 3px 1px #5c2a2726);
+}
+.object-mobile {
+  color: #fff0dc;
+  background: linear-gradient(140deg, #dfab7b, #c97749);
+}
+.object-content {
+  color: #f9eee0;
+  background: linear-gradient(140deg, #c6b390, #a08760);
+}
+.object-credit {
+  color: #fbe7d6;
+  background: linear-gradient(140deg, #d78b69, #aa5134);
+}
+.service-option-copy {
+  min-width: 0;
+}
+.service-option-copy strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 650;
+}
+.service-option-copy small {
+  display: block;
+  color: #786959;
+  font-size: var(--text-min);
+  margin-top: 4px;
+  line-height: 1.65;
+  max-width: 150px;
+}
+.service-option .option-arrow {
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+  color: #98816b;
+}
+.season-card {
+  position: relative;
+  display: block;
+  padding: 23px 23px 20px;
+  border-radius: 24px;
+  transition: transform 0.25s;
+}
+.season-card:hover {
+  filter: brightness(1.04);
+}
+.season-card .eyebrow {
+  font-size: var(--text-decor);
+  letter-spacing: 0.1em;
+  margin-bottom: 9px;
+}
+.season-card h2 {
+  font: 400 23px/1.4 var(--display);
+  letter-spacing: -0.04em;
+}
+.season-card > p {
+  font-size: var(--text-min);
+  color: #7a6552;
+  margin-top: 10px;
+  line-height: 1.65;
+}
+.season-card > img {
+  position: absolute;
+  bottom: 28px;
+  right: 24px;
+  width: 60px;
+  opacity: 0.84;
+  transform: rotate(17deg);
+  filter: drop-shadow(4px 5px 4px #bc6f3c2b);
+}
+.season-card .season-arrow {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 20px;
+  bottom: 17px;
+  color: #ac6f48;
+}
+.stage-dock {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  width: min(570px, 92%);
+  min-height: 83px;
+  margin: 20px auto 0;
+  padding: 8px 25px;
+  border-radius: 34px;
+  background: linear-gradient(135deg, #fbf5ed, #eee3d6);
+  box-shadow: 8px 14px 22px #69543d21;
+}
+.stage-dock > a,
+.stage-dock > button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 56px;
+  padding: 0;
+  background: none;
+  color: #827161;
+  font-size: var(--text-min);
+  line-height: 1.4;
+}
+.stage-dock > a:hover {
+  color: var(--accent);
+}
+.stage-dock > a .icon {
+  width: 25px;
+  height: 25px;
+}
+.stage-dock > .dock-contact {
+  align-self: stretch;
+  justify-content: flex-end;
+  padding-bottom: 7px;
+  color: #a24c2e !important;
+}
+.dock-orb {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff5e5;
+  background: linear-gradient(135deg, #d98558, #b55231 80%);
+  border: 1px solid #a95336;
+  box-shadow:
+    inset 1px 1px 2px #ffd7b194,
+    inset -1px -2px 2px #81331d47,
+    5px 7px 13px #9555313d;
+  --icon-detail: #bd643e;
+  transition: transform 0.2s;
+}
+.dock-contact:hover .dock-orb {
+  transform: translate(-50%, -50%) scale(1.04);
+}
+.dock-orb .icon {
+  width: 29px;
+  height: 29px;
+}
+
+/* The landscape recedes behind the copy and the foreground diorama. */
+.hero-backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 auto;
+  height: calc(100% + 240px);
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(180deg, transparent, #000 22%, #000 48%, #000c 62%, #0005 80%, transparent);
+}
+.hero-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0 -24px -24px;
+  background: url("../images/autumn-riverside.webp") center 48% / cover no-repeat;
+  filter: blur(4px) saturate(0.8) sepia(0.1);
+  opacity: 0.4;
+}
+.hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f2ece3 4%, #f2ece3eb 26%, #f2ece340 60%, transparent);
+}
+.hero-layout {
+  position: relative;
+  z-index: 1;
+}
+.hero-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.35fr);
+  align-items: stretch;
+  gap: 32px;
+  min-height: 500px;
+}
+.hero-introduction {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 28px;
+}
+.hero-leaf-pile {
+  position: absolute;
+  width: 164px;
+  aspect-ratio: 3 / 2;
+  pointer-events: none;
+  --leaf-angle: -18deg;
+}
+.hero-leaf-pile-left {
+  left: calc(-1 * clamp(36px, (100vw - 1240px) / 2 - 12px, 180px));
+  bottom: 12px;
+}
+.hero-leaf-pile-right {
+  top: 20px;
+  right: calc(-1 * min(180px, max(0px, (100vw - 1120px) / 2 - 40px)));
+  width: 200px;
+  --leaf-angle: 26deg;
+}
+.hero-falling-leaf {
+  display: block;
+  width: 100%;
+  transform: rotate(var(--leaf-angle));
+}
+.hero-falling-leaf img { display: block; width: 100%; height: auto; }
+.welcome-copy .eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #a65332;
+}
+.hero-scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-top: 0;
+}
+.hero-widgets {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  width: min(984px, 100%);
+  margin: 48px auto 0;
+}
+.hero-widgets > * {
+  flex: 0 1 calc((100% - 48px) / 3);
+  min-width: 0;
+  min-height: 340px;
+  border-radius: var(--radius);
+}
+.hero-widgets .widget-heading h2 {
+  font-size: 15px;
+}
+.hero-widgets .widget-heading {
+  min-height: 34px;
+}
+.hero-widgets .season-card {
+  padding-top: 28px;
+}
+.experience-stage .button-outline {
+  color: #f8f0e7;
+  background: #ffffff06;
+  border-color: #d4cec241;
+  box-shadow: inset 0 1px 1px #ffffff0c;
+}
+
+@media (max-width: 1199px) {
+  .hero-leaf-pile-left { width: 128px; bottom: -20px; }
+  .experience-stage {
+    padding-top: 38px;
+  }
+  .hero-overview {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+    gap: 24px;
+    min-height: 460px;
+  }
+  .welcome-copy h1 {
+    font-size: clamp(37px, 4.3vw, 51px);
+  }
+  .welcome-copy > p:last-child {
+    font-size: 14px;
+  }
+  .stage-dock {
+    width: 100%;
+    padding-inline: 16px;
+  }
+  .consult-card {
+    padding: 23px 20px;
+  }
+  .consult-card h2 {
+    font-size: 26px;
+  }
+  .consult-card > p {
+    font-size: var(--text-min);
+  }
+  .consult-actions .button {
+    gap: 6px;
+    padding-inline: 8px;
+    font-size: var(--text-min);
+  }
+  .service-widget {
+    padding: 20px 14px 16px;
+  }
+  .widget-heading h2 {
+    font-size: 14px;
+  }
+  .service-option {
+    gap: 10px;
+  }
+  .service-object {
+    width: 48px;
+    height: 56px;
+  }
+  .service-object > .icon {
+    width: 28px;
+    height: 28px;
+  }
+  .service-option-copy strong {
+    font-size: 15px;
+  }
+  .service-option-copy small {
+    font-size: var(--text-min);
+  }
+  .season-card {
+    padding: 21px;
+  }
+  .season-card h2 {
+    font-size: 21px;
+  }
+  .season-card > img {
+    width: 58px;
+  }
+}
+
+@media (max-width: 899px) {
+  .hero-leaf-pile-left { width: 120px; bottom: -30px; }
+  .hero-leaf-pile-right { width: 148px; top: 12px; right: 0; }
+  .hero-overview {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 20px;
+    min-height: 400px;
+  }
+  .welcome-copy h1 {
+    font-size: clamp(32px, 4.6vw, 41px);
+  }
+  .welcome-copy .eyebrow {
+    margin-bottom: 19px;
+  }
+  .welcome-copy > p:last-child {
+    font-size: 13px;
+  }
+  .terrain {
+    width: 100%;
+  }
+  .stage-dock {
+    padding: 9px 10px;
+    border-radius: 26px;
+    margin-top: 20px;
+  }
+  .stage-dock > a,
+  .stage-dock > button {
+    font-size: var(--text-min);
+  }
+  .stage-dock > a .icon {
+    width: 22px;
+    height: 22px;
+  }
+  .dock-orb {
+    width: 58px;
+    height: 58px;
+  }
+  .hero-widgets {
+    margin-top: 36px;
+  }
+  .hero-widgets > * {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .consult-card {
+    padding: 28px;
+  }
+  .consult-card h2 {
+    font-size: 29px;
+  }
+  .consult-card > p {
+    font-size: var(--text-min);
+  }
+  .consult-actions {
+    margin-top: auto;
+  }
+  .consult-actions .button {
+    font-size: var(--text-min);
+  }
+  .service-option-copy small {
+    font-size: var(--text-min);
+  }
+}
+
+@media (max-width: 699px) {
+  .hero-leaf-pile-left { left: auto; right: -16px; bottom: -5px; width: 100px; }
+  .hero-leaf-pile-right { left: -12px; right: auto; top: -106px; width: 128px; }
+  .experience-stage {
+    padding: 32px 0 45px;
+    margin-bottom: 90px;
+  }
+  .hero-backdrop {
+    height: calc(100% + 200px);
+    mask-image: linear-gradient(180deg, transparent 20%, #000 50%, #0009 70%, transparent);
+  }
+  .hero-backdrop::before {
+    background-position: 57% center;
+    opacity: 0.23;
+  }
+  .hero-backdrop::after {
+    background: linear-gradient(180deg, #f2ece3 7%, #f2ece380 32%, transparent 60%);
+  }
+  .hero-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    min-height: 0;
+  }
+  .hero-introduction {
+    padding-top: 0;
+  }
+  .welcome-copy h1 {
+    font-size: clamp(37px, 8.9vw, 54px);
+  }
+  .welcome-copy .eyebrow {
+    margin-bottom: 19px;
+  }
+  .welcome-copy > p:last-child {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+  .hero-scene {
+    padding-top: 0;
+    margin-top: 28px;
+  }
+  .terrain {
+    width: 100%;
+    margin: 0;
+  }
+  .stage-dock {
+    width: min(520px, 100%);
+    margin-top: 20px;
+  }
+  .hero-widgets {
+    margin-top: 34px;
+    gap: 20px;
+  }
+  .hero-widgets > * {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  .consult-card {
+    padding: 24px 20px;
+  }
+  .consult-card h2 {
+    font-size: 25px;
+  }
+  .consult-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 599px) {
+  .experience-stage {
+    padding-top: 28px;
+  }
+  .hero-widgets {
+    max-width: 420px;
+  }
+  .hero-widgets > * {
+    flex-basis: 100%;
+    min-height: 0;
+  }
+  .consult-card {
+    padding: 24px;
+  }
+  .consult-card h2 br {
+    display: none;
+  }
+  .consult-actions {
+    flex-direction: row;
+    padding-top: 21px;
+  }
+  .consult-actions .button {
+    font-size: 13px;
+    min-height: 43px;
+  }
+  .service-widget {
+    padding: 23px 20px 17px;
+  }
+  .widget-heading h2 {
+    font-size: 17px;
+  }
+  .service-option {
+    gap: 17px;
+    padding-block: 15px;
+  }
+  .service-object {
+    width: 58px;
+    height: 64px;
+  }
+  .service-option-copy strong {
+    font-size: 16px;
+  }
+  .service-option-copy small {
+    font-size: var(--text-min);
+    max-width: 185px;
+  }
+  .season-card {
+    padding: 24px;
+  }
+  .season-card > img {
+    width: 72px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 359px) {
+  .hero-consult { width: var(--hero-consult-width, 180px); padding-inline: 27px; }
+  .hero-leaf-pile-left { right: -24px; width: 94px; }
+  .welcome-copy h1 {
+    font-size: 34px;
+  }
+  .service-widget {
+    padding-inline: 18px;
+  }
+  .widget-heading h2 {
+    font-size: 15px;
+  }
+  .service-option {
+    gap: 12px;
+  }
+  .service-option-copy small {
+    font-size: var(--text-min);
+  }
+}
